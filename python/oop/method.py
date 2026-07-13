@@ -77,6 +77,10 @@ class Person:
         age = 2026 - year
         return cls(name, age)
 
+    @classmethod
+    def test(cls):
+        return cls
+
 
 print(Person.a_person())
 # output: You are a person!
@@ -86,3 +90,6 @@ print(type(me))
 # output: <class '__main__.Person'>
 print(me.age)
 # output: 24
+print(me.test() == Person)
+# output: True
+# while self == object // cls == class
